@@ -1,10 +1,2 @@
-﻿  glad.c
-  glslprogram.cpp
-  glutils.cpp
-  teapot.cpp
-  torus.cpp
-  trianglemesh.cpp
-  main.cpp
-  scenebasic_uniform.cpp
-  Generating Code...
+﻿  scenebasic_uniform.cpp
   Project_Template.vcxproj -> C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\x64\Debug\Project_Template.exe
