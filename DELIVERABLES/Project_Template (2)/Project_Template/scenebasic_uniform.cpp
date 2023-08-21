@@ -193,13 +193,59 @@ void SceneBasic_Uniform::render()
     //glBindVertexArray(vaoHandle);
     //glDrawArrays(GL_TRIANGLES, 0, 3 );
 
-    vec4 lightPos = vec4(0.0f, 10.0f, 0.0f, 1.0f);                      //*new code*//
-    prog.setUniform("Spot.Position", vec3(view * lightPos)); //point of origin
+    vec4 lightPos = vec4(0.0f, 40.0f, 0.0f, 0.75f);   //*new code*//
+    prog.setUniform("Spot.Position", vec4(view * lightPos)); //point of origin
     mat3 normalMatrix = mat3(vec3(view[0]), vec3(view[1]), vec3(view[2]));
     prog.setUniform("Spot.Direction", normalMatrix * vec3(-lightPos)); //direction of the spotlight
     
 
-    //glBindVertexArray(0);
+    ////glBindVertexArray(0);
+    //prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    ////prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+
+    //prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    ////prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    //prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    ////prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    ////prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    //prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    //model = mat4(1.0f);
+    //model = glm::translate(model, vec3(-3.0f, 0.75f, 3.0f));//translation is set here?
+    //model = glm::rotate(model, glm::radians(angle/*angle*/), vec3(1.0f, 0.0f, 1.0f));//rotation is set here?
+    ////model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    //setMatrices();
+    ////torus.render();
+
+    ////*//
+
+    //prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    ////prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+
+    //prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    ////prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    //prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    ////prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    ////prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    //prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    //model = mat4(1.0f);
+    //model = glm::translate(model, vec3(1.0f, 0.75f, 3.0f));//translation is set here?
+    //model = glm::rotate(model, glm::radians(-angle/*angle*/), vec3(1.0f, 1.0f, 1.0f));//rotation is set here?
+    ////model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+
+    ////view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    ////view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
+    ////projection = mat4(1.0f);
+    //setMatrices(); 
+    ////teapot.render();
+
+    ////*//
+
     prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
     //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
 
@@ -213,53 +259,7 @@ void SceneBasic_Uniform::render()
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(-3.0f, 0.75f, 3.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(angle/*angle*/), vec3(1.0f, 0.0f, 1.0f));//rotation is set here?
-    //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
-    setMatrices();
-    //torus.render();
-
-    //*//
-
-    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
-
-    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
-    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
-
-    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
-
-    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
-
-    model = mat4(1.0f);
-    model = glm::translate(model, vec3(1.0f, 0.75f, 3.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(-angle/*angle*/), vec3(1.0f, 1.0f, 1.0f));//rotation is set here?
-    //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
-
-    //view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
-    //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
-    //projection = mat4(1.0f);
-    setMatrices(); 
-    //teapot.render();
-
-    //*//
-
-    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
-
-    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
-    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
-
-    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
-
-    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
-
-    model = mat4(1.0f);
-    model = glm::translate(model, vec3(0.0f, 0.0f, 1.0f));//translation is set here?
+    model = glm::translate(model, vec3(0.0f, 0.0f, -10.0f));//translation is set here?
     model = glm::rotate(model, glm::radians(35.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
     //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 

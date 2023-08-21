@@ -102,4 +102,6 @@ vec3 phongSpotlight(vec3 n, vec4 pos)
 void main() {
     //FragColor = vec4(LightIntensity, 1.0);
     FragColor = vec4(phongSpotlight(Normal, Position), 1.0);
+
+
 }
