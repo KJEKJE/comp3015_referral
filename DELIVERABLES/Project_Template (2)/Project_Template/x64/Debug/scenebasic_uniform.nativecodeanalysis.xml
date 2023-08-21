@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>scene.h</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Scene::model' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Scene::{ctor}</FUNCTION>
+    <DECORATED>??0Scene@@QEAA@XZ</DECORATED>
+    <FUNCLINE>15</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Scene::model</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>scene.h</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Scene::view' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Scene::{ctor}</FUNCTION>
+    <DECORATED>??0Scene@@QEAA@XZ</DECORATED>
+    <FUNCLINE>15</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Scene::view</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>scene.h</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Scene::projection' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Scene::{ctor}</FUNCTION>
+    <DECORATED>??0Scene@@QEAA@XZ</DECORATED>
+    <FUNCLINE>15</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Scene::projection</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

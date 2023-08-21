@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>trianglemesh.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleMesh::nVerts' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleMesh::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleMesh@@QEAA@XZ</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleMesh::nVerts</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>trianglemesh.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleMesh::vao' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleMesh::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleMesh@@QEAA@XZ</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleMesh::vao</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>14</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>31</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>34</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>38</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>46</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>60</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>62</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>plane.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Plane::{ctor}</FUNCTION>
+    <DECORATED>??0Plane@@QEAA@MMHHMM@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

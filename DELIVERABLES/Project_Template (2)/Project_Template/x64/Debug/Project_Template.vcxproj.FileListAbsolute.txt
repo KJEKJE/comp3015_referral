@@ -6,3 +6,5 @@ C:\Users\Marius\Desktop\Project_Template\x64\Debug\Project_Template.exe
 C:\Users\Marius\Desktop\Project_Template\x64\Debug\Project_Template.pdb
 C:\Users\kjell\Downloads\Project_Template (2)\Project_Template\x64\Debug\Project_Template.exe
 C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\x64\Debug\Project_Template.exe
+C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\x64\Debug\Project_Template.exe.lastcodeanalysissucceeded
+C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\x64\Debug\NativeCodeAnalysis.read.1.tlog

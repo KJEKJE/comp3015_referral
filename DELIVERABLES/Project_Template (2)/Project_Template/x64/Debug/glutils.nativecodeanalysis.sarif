@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.37.32822.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/kjell/documents/github/comp3015_referral/deliverables/project_template (2)/project_template/helper/glutils.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "d5b98af2dea55d9d00ff059ea003779a0fc2d14bdbbf47233dcb19a30132939e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/kjell/documents/github/comp3015_referral/deliverables/project_template (2)/project_template/helper/glutils.h"
+          },
+          "hashes": {
+            "sha-256": "9c3dcb9d0a038dd958a27b97ac3177727015c13a5713ff6571efb45e093a8872"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/kjell/documents/github/comp3015_referral/deliverables/dependencies/include/glad/glad.h"
+          },
+          "hashes": {
+            "sha-256": "5b4ddfd18e45590dcc08ac071fd0c4d11873be7c375bbdabb7f729c12faa8a48"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/kjell/documents/github/comp3015_referral/deliverables/dependencies/include/khr/khrplatform.h"
+          },
+          "hashes": {
+            "sha-256": "7b1e01aaa7ad8f6fc34b5c7bdf79ebf5189bb09e2c4d2e79fc5d350623d11e83"
+          }
+        }
+      ]
+    }
+  ]
+}

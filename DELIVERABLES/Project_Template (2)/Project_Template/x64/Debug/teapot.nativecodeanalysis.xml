@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>trianglemesh.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleMesh::nVerts' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleMesh::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleMesh@@QEAA@XZ</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleMesh::nVerts</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>trianglemesh.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleMesh::vao' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleMesh::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleMesh@@QEAA@XZ</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleMesh::vao</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::{ctor}</FUNCTION>
+    <DECORATED>??0Teapot@@QEAA@HAEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>18</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::{ctor}</FUNCTION>
+    <DECORATED>??0Teapot@@QEAA@HAEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>35</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::{ctor}</FUNCTION>
+    <DECORATED>??0Teapot@@QEAA@HAEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>20</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::{ctor}</FUNCTION>
+    <DECORATED>??0Teapot@@QEAA@HAEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>28</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::generatePatches</FUNCTION>
+    <DECORATED>?generatePatches@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@00AEAV?$vector@IV?$allocator@I@std@@@3@H@Z</DECORATED>
+    <FUNCLINE>28</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::generatePatches</FUNCTION>
+    <DECORATED>?generatePatches@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@00AEAV?$vector@IV?$allocator@I@std@@@3@H@Z</DECORATED>
+    <FUNCLINE>28</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::moveLid</FUNCTION>
+    <DECORATED>?moveLid@Teapot@@AEAAXHAEAV?$vector@MV?$allocator@M@std@@@std@@AEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>63</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::moveLid</FUNCTION>
+    <DECORATED>?moveLid@Teapot@@AEAAXHAEAV?$vector@MV?$allocator@M@std@@@std@@AEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>63</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::moveLid</FUNCTION>
+    <DECORATED>?moveLid@Teapot@@AEAAXHAEAV?$vector@MV?$allocator@M@std@@@std@@AEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>63</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>74</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::moveLid</FUNCTION>
+    <DECORATED>?moveLid@Teapot@@AEAAXHAEAV?$vector@MV?$allocator@M@std@@@std@@AEBU?$mat@$03$03M$0A@@glm@@@Z</DECORATED>
+    <FUNCLINE>63</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>139</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>143</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>144</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>147</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>161</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>162</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>164</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>165</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>166</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::buildPatch</FUNCTION>
+    <DECORATED>?buildPatch@Teapot@@AEAAXQEAY03U?$vec@$02M$0A@@glm@@AEAV?$vector@MV?$allocator@M@std@@@std@@1111AEAV?$vector@IV?$allocator@I@std@@@5@AEAH33HU?$mat@$02$02M$0A@@3@_N@Z</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>203</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>204</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>204</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>208</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>210</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>210</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>211</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>211</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::computeBasisFunctions</FUNCTION>
+    <DECORATED>?computeBasisFunctions@Teapot@@AEAAXAEAV?$vector@MV?$allocator@M@std@@@std@@0H@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>55</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluate</FUNCTION>
+    <DECORATED>?evaluate@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>216</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>53</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluate</FUNCTION>
+    <DECORATED>?evaluate@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>216</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluate</FUNCTION>
+    <DECORATED>?evaluate@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>216</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>38</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluate</FUNCTION>
+    <DECORATED>?evaluate@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>216</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>57</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>55</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>57</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>55</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\helper\</FILEPATH>
+      <FILENAME>teapot.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Teapot::evaluateNormal</FUNCTION>
+    <DECORATED>?evaluateNormal@Teapot@@AEAA?AU?$vec@$02M$0A@@glm@@HHAEAV?$vector@MV?$allocator@M@std@@@std@@0QEAY03U23@@Z</DECORATED>
+    <FUNCLINE>227</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
