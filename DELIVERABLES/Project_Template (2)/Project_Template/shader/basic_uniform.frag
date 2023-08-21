@@ -18,6 +18,9 @@ uniform struct SpotlightInfo
     float Cutoff;
 } Spot;
 
+const int level = 8;
+const float scaleFactor = 1.0/level;
+
 uniform struct MaterialInfo
 {
     vec3 Ka; //ambient!*
@@ -44,7 +47,7 @@ vec3 phongSpotlight(vec3 n, vec4 pos)
         spotScale = pow(cosAng, Spot.Exponent);
 
         float sDotN = max(dot(s,n), 0.0);
-        diffuse = Spot.Ld*Material.Kd*sDotN;
+        diffuse = Spot.Ld*Material.Kd*(floor(sDotN * level) * scaleFactor);
         spec = vec3 (0.0);
 
         if(sDotN > 0.0)

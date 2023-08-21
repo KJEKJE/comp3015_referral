@@ -26,6 +26,8 @@ private:
     //Torus torus; //Lab2
     //Teapot teapot;
     float angle; //Lab1 for spinning
+    float tAngle; //toon shading
+    float tPrev; //toon shading
 
     Plane plane; //plane.
     std::unique_ptr<ObjMesh> mesh; //for swampy?

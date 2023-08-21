@@ -25,7 +25,7 @@ using glm::mat4;
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f)
+SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f), tPrev(0)
 {
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
@@ -38,6 +38,8 @@ SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(
 
 void SceneBasic_Uniform::initScene()
 {
+    angle = 0.0f;
+    tAngle = 0.0f;
     compile();
 
     //FOR TRIANGLE (LAB1)//
@@ -172,6 +174,18 @@ void SceneBasic_Uniform::update( float t )
             angle -= 360.0f;
     }
 
+    float deltaT = t - tPrev;
+    if (tPrev == 0.0f)
+    {
+        deltaT = 0.0f;
+        tPrev = t;
+        tAngle += 0.25f * deltaT;
+        if (tAngle > glm::two_pi<float>())
+        {
+            tAngle -= glm::two_pi<float>();
+        }
+    }
+
 }
 
 void SceneBasic_Uniform::render()
@@ -194,7 +208,9 @@ void SceneBasic_Uniform::render()
     //glBindVertexArray(vaoHandle);
     //glDrawArrays(GL_TRIANGLES, 0, 3 );
 
-    vec4 lightPos = vec4(0.0f, 40.0f, 0.0f, 0.75f);   //*new code*//
+    //vec4 lightPos = vec4(0.0f, 40.0f, 0.0f, 0.75f);   //*new code*//
+    vec4 lightPos = vec4(0, 40.0f, 10.0f * sin(tAngle), 1.0f - (sin(angle*0.05)*0.4));   //moving light for toon shading
+    //light.position?
     prog.setUniform("Spot.Position", vec4(view * lightPos)); //point of origin
     mat3 normalMatrix = mat3(vec3(view[0]), vec3(view[1]), vec3(view[2]));
     prog.setUniform("Spot.Direction", normalMatrix * vec3(-lightPos)); //direction of the spotlight
