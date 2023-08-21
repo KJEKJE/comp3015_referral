@@ -171,6 +171,7 @@ void SceneBasic_Uniform::update( float t )
         if (angle >= 360.0f)
             angle -= 360.0f;
     }
+
 }
 
 void SceneBasic_Uniform::render()
@@ -260,7 +261,8 @@ void SceneBasic_Uniform::render()
 
     model = mat4(1.0f);
     model = glm::translate(model, vec3(0.0f, 0.0f, -10.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(35.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(15.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(angle), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
     //view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
