@@ -92,20 +92,22 @@ void SceneBasic_Uniform::initScene()
     //#endif
     //glBindVertexArray(0);
 
-    glEnable(GL_DEPTH_TEST);
-    model = mat4(1.0f);
 
-    model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    ////CURRENT OLD VERSION INIT
+    ////glEnable(GL_DEPTH_TEST);
+    ////model = mat4(1.0f);
 
-    view = glm::lookAt(vec3(-1.0f, 0.0f, 20.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
-    //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
-    projection = mat4(1.0f);
+    ////model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
-    //model2 = mat4(1.0f);
-    //model2 = glm::rotate(model2, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
-    //view2 = glm::lookAt(vec3(0.0f, 1.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
-    ////view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
-    //projection2 = mat4(1.0f);
+    ////view = glm::lookAt(vec3(-1.0f, 0.0f, 20.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
+    //////view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
+    ////projection = mat4(1.0f);
+
+    ////model2 = mat4(1.0f);
+    ////model2 = glm::rotate(model2, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    ////view2 = glm::lookAt(vec3(0.0f, 1.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    //////view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
+    ////projection2 = mat4(1.0f);
 
 
 
@@ -115,22 +117,33 @@ void SceneBasic_Uniform::initScene()
     //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
 
     //prog.setUniform("Color", glm::vec3( 1.0f, 0.0f, 0.0f)); //struggling to pull off atm
-    
 
 
-    //PHONG//
-    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+    //////PHONG//
+    ////prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    ////prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
 
-    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
-    prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+    ////prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    ////prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
 
-    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+    ////prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    ////prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
 
-    prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    ////prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    ////prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
+    glEnable(GL_DEPTH_TEST);
+    //model = mat4(1.0f);
+
+    //model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+
+    view = glm::lookAt(vec3(-1.0f, 0.0f, 20.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    projection = mat4(1.0f);
+    prog.setUniform("Spot.Ld", vec3(0.9f));
+    prog.setUniform("Spot.Ls", vec3(0.9f));
+    prog.setUniform("Spot.La", vec3(0.5f));
+    prog.setUniform("Spot.Exponent", vec3(50.0f));
+    prog.setUniform("Spot.Cutoff", vec3(15.0f));
 
 }
 
@@ -179,6 +192,12 @@ void SceneBasic_Uniform::render()
 
     //glBindVertexArray(vaoHandle);
     //glDrawArrays(GL_TRIANGLES, 0, 3 );
+
+    vec4 lightPos = vec4(0.0f, 10.0f, 0.0f, 1.0f);                      //*new code*//
+    prog.setUniform("Spot.Position", vec3(view * lightPos)); //point of origin
+    mat3 normalMatrix = mat3(vec3(view[0]), vec3(view[1]), vec3(view[2]));
+    prog.setUniform("Spot.Direction", normalMatrix * vec3(-lightPos)); //direction of the spotlight
+    
 
     //glBindVertexArray(0);
     prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
@@ -311,12 +330,9 @@ void SceneBasic_Uniform::setMatrices()
     mat4 mv = view * model;
     prog.setUniform("ModelViewMatrix", mv);
     prog.setUniform("NormalMatrix", glm::mat3(vec3(mv[0]), vec3(mv[1]), vec3(mv[2])));    
-    prog.setUniform("MVP", projection * mv);
-    
-    //mat4 mv2 = view2 * model2;
-    //prog.setUniform("ModelViewMatrix", mv2);
-    //prog.setUniform("NormalMatrix", glm::mat3(vec3(mv2[0]), vec3(mv2[1]), vec3(mv2[2])));    
-    //prog.setUniform("MVP", projection2 * mv2);
+    prog.setUniform("MVP", projection * mv);   
+
+    prog.setUniform("ProjectionMatrix", projection);    //currently not-used
 
 }
 
