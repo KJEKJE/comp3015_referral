@@ -86,7 +86,7 @@ void SceneBasic_Uniform::initScene()
 
     model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
-    view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
+    view = glm::lookAt(vec3(-1.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
     //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
     projection = mat4(1.0f);
 
@@ -142,7 +142,7 @@ void SceneBasic_Uniform::update( float t )
     
     // LAB1//
     if (m_animate) {
-        angle += 0.001f;
+        angle += 0.01f;
 
         if (angle >= 360.0f)
             angle -= 360.0f;
@@ -170,9 +170,26 @@ void SceneBasic_Uniform::render()
     //glDrawArrays(GL_TRIANGLES, 0, 3 );
 
     //glBindVertexArray(0);
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
 
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(-3.0f, 0.75f, 3.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(angle/*angle*/), vec3(1.0f, 0.0f, 1.0f));//rotation is set here?
+    //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
     setMatrices();
     torus.render();
+
+    //*//
 
     prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
     //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
@@ -187,8 +204,8 @@ void SceneBasic_Uniform::render()
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(-1.0f, 0.75f, 3.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::translate(model, vec3(1.0f, 0.75f, 3.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(-angle/*angle*/), vec3(1.0f, 1.0f, 1.0f));//rotation is set here?
     //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
     //view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
