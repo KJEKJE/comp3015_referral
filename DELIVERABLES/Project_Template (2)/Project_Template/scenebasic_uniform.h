@@ -12,6 +12,9 @@
 #include "helper/torus.h"
 //lab3
 #include "helper/teapot.h"
+#include "helper/plane.h"
+#include "helper/objmesh.h"
+//#include "helper/swampy.obj"
 
 
 class SceneBasic_Uniform : public Scene
@@ -23,6 +26,8 @@ private:
     Torus torus; //Lab2
     Teapot teapot;
     float angle; //Lab1 for spinning
+
+    //unique_ptr<ObjMesh>
 
     glm::mat4 rotationMatrix; //check later for errors
 
