@@ -6,7 +6,7 @@ layout (location = 1) in vec3 VertexNormal;
 
 //flat out vec3 LightIntensity;
 
-out vec3 Position; //might need to be vec3, will see
+flat out vec3 Position; //might need to be vec3, will see
 out vec3 Normal;
 
 //out vec3 Color;

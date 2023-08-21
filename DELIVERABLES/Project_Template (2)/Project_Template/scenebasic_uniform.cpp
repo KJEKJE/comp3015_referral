@@ -27,7 +27,7 @@ using glm::mat4;
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f), tPrev(0.0f), lightPos(5.0f, 5.0f, 5.0f, 1.0f)
+SceneBasic_Uniform::SceneBasic_Uniform() : plane(60.0f, 60.0f, 120, 120), angle(0.0f), tPrev(0.0f), lightPos(5.0f, 5.0f, 5.0f, 1.0f)
 {
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
@@ -36,7 +36,7 @@ SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(
     mesh4 = ObjMesh::load("../Project_Template/media/trees.obj", true); //for controls or splatter
     mesh5 = ObjMesh::load("../Project_Template/media/shanopi.obj", true); //for fog
 
-    //spot = ObjMesh::load("media/spot/spot_triangulated.obj");
+    spot = ObjMesh::load("../Project_Template/media/flare.obj");
 
 }  //last three numbers open the teapot
 
@@ -129,17 +129,17 @@ void SceneBasic_Uniform::initScene()
 
 
     //////PHONG//
-    ////prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    ////prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+    //prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
 
-    ////prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
-    ////prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+    //prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
 
-    ////prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    ////prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+    //prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
 
-    ////prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
-    ////prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    //prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
     glEnable(GL_DEPTH_TEST);
     //model = mat4(1.0f);
@@ -149,7 +149,7 @@ void SceneBasic_Uniform::initScene()
     view = glm::lookAt(vec3(-1.0f, 0.0f, 22.0f), vec3(0.0f, angle, 0.0f), vec3(0.0f, 1.0f, 0.0f));
     projection = /*mat4(1.0f);*/ glm::perspective(glm::radians(50.0f), (float)width / height, 0.5f, 100.0f);
 
-    angle = 90.0f;
+    angle = 45.0f;
     rotationSpeed = 0.05f;
 
     prog.setUniform("Spot.Ld", vec3(0.9f));
@@ -225,13 +225,15 @@ void SceneBasic_Uniform::drawScene()
 
 void SceneBasic_Uniform::drawFloor()
 {
-    model = glm::mat4(1.0f);
-    prog.setUniform("Material.Rough", 0.9f);
+    model = glm::mat4(0.8f);
+    prog.setUniform("Material.Rough", 0.7f);
     prog.setUniform("Material.Metal", 0);
-    prog.setUniform("Material.Colour", glm::vec3(0.2f));
-    model = glm::translate(model, glm::vec3(0.0f, -0.7f, 0.0f));
+    prog.setUniform("Material.Colour", glm::vec3(0.2f, 0.25, 0.19)); //50, 64, 42
+    model = glm::translate(model, glm::vec3((0.0f) , 1.0f, 0.0f));
+    model = glm::translate(model, glm::vec3(10.0f, 10.0f, 10.0f));
+    model = glm::rotate(model, glm::radians(90.0f), vec3(0.0f, 0.0f, 1.0f));
     setMatrices();
-    //plane.render();
+    plane.render();
 
 }
 
@@ -337,6 +339,7 @@ void SceneBasic_Uniform::render()
 
     //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.4f, 0.071f, 0.478f));  //102, 18, 122
 
     model = mat4(1.0f);
     model = glm::translate(model, vec3(0.0f, 0.0f, -10.0f));//translation is set here?
@@ -363,10 +366,11 @@ void SceneBasic_Uniform::render()
 
     //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.4f, 0.33f, 0.071f)); //102, 84, 18
 
     model = mat4(1.0f);
     model = glm::translate(model, vec3(0.0f, 0.0f, 1.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(angle-360.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
     mesh->render(); //swampy
 
@@ -382,34 +386,41 @@ void SceneBasic_Uniform::render()
     //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
 
     //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Shininess", 200.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.871f, 0.545f, 0.016f)); //222, 139, 4
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(0.0f, 0.0f, angle*5));//translation is set here?
-    model = glm::rotate(model, glm::radians(40.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    //model = glm::translate(model, vec3(0.0f, 0.0f, angle*5));//translation is set here?
+    //model = glm::rotate(model, glm::radians(40.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+
+    model = glm::translate(model, vec3(-8.0f, 2.0f, -5.0f + (0.25 * angle)));//translation is set here?
+    model = glm::rotate(model, glm::radians(-15.0f), vec3(1.0f, 0.0f+ (-0.3 * angle), 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
     mesh2->render(); //flare
 
 
 
     //*3*//
-    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    prog.setUniform("Material.Kd", 0.6f, 0.55f, 0.9f); //diffuse
     prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
     prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Shininess", 40.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.2f, 0.349f, 0.082f)); //51, 89, 21
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(0.0f, 0.0f, -10.0f));//translation is set here?
+    model = glm::translate(model, vec3(0.0f, 0.0f, -8.5f));//translation is set here?
     model = glm::rotate(model, glm::radians(15.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
     model = glm::rotate(model, glm::radians(angle), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
     mesh3->render(); //grass
 
     //*4*//
-    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
-    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    prog.setUniform("Material.Kd", 0.8f, 0.55f, 0.9f); //diffuse
+    prog.setUniform("Material.Ka", 0.2f, 0.25f, 0.2f); //ambient
+    prog.setUniform("Material.Ks", 0.6f, 0.6f, 0.6f); //specular
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.467f, 0.612f, 0.263f)); //119, 156, 67
 
     model = mat4(1.0f);
     model = glm::translate(model, vec3(0.0f, 10.0f, -5.0f));//translation is set here?
@@ -420,9 +431,10 @@ void SceneBasic_Uniform::render()
 
     //*5*//
     prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
-    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    prog.setUniform("Material.Ka", 0.9f, 0.55f, 0.9f); //ambient
     prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
-    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+    prog.setUniform("Material.Shininess", 75.0f); //can play with this more later
+    prog.setUniform("Material.Colour", glm::vec3(0.215f, 0.612f, 0.172f)); //55, 156, 44
 
     model = mat4(1.0f);
     model = glm::translate(model, vec3(6.0f, 2.0f, -5.0f));//translation is set here?

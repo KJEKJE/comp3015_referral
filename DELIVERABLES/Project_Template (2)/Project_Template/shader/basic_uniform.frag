@@ -1,7 +1,7 @@
 #version 460
 
-in vec3 Position;
-in vec3 Normal;
+flat in vec3 Position;
+flat in vec3 Normal;
 
 layout (location = 0) out vec4 FragColour;
 

@@ -1,4 +1,4 @@
 ﻿  scenebasic_uniform.cpp
-C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\scenebasic_uniform.cpp(464,24): warning C4930: 'SceneBasic_Uniform update(float)': prototyped function not called (was a variable definition intended?)
-C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\scenebasic_uniform.cpp(470,24): warning C4930: 'SceneBasic_Uniform update(float)': prototyped function not called (was a variable definition intended?)
+C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\scenebasic_uniform.cpp(476,24): warning C4930: 'SceneBasic_Uniform update(float)': prototyped function not called (was a variable definition intended?)
+C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\scenebasic_uniform.cpp(482,24): warning C4930: 'SceneBasic_Uniform update(float)': prototyped function not called (was a variable definition intended?)
   Project_Template.vcxproj -> C:\Users\kjell\Documents\GitHub\comp3015_referral\DELIVERABLES\Project_Template (2)\Project_Template\x64\Debug\Project_Template.exe
