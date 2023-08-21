@@ -28,6 +28,8 @@ private:
     float angle; //Lab1 for spinning
     float tAngle; //toon shading
     float tPrev; //toon shading
+    bool leftPressed;
+    bool rightPressed;
 
     Plane plane; //plane.
     std::unique_ptr<ObjMesh> mesh; //for swampy?
@@ -49,6 +51,10 @@ public:
     void render();
     void resize(int, int);
     void setMatrices();
+    void moveLeft(float r);
+    void moveRight(float r);
+
+    float rotateModifier = 0.0f;
 };
 
 #endif // SCENEBASIC_UNIFORM_H

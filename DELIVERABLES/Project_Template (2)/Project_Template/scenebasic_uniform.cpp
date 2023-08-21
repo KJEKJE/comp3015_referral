@@ -14,6 +14,7 @@ using std::endl;
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "helper/glutils.h"
+#include "GLFW/glfw3.h" //for keyboard controls
 
 using glm::vec3;
 
@@ -21,6 +22,7 @@ using glm::vec4;
 using glm::mat3;
 
 using glm::mat4;
+
 
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
@@ -40,6 +42,7 @@ void SceneBasic_Uniform::initScene()
 {
     angle = 0.0f;
     tAngle = 0.0f;
+    rotateModifier = 0.0f;
     compile();
 
     //FOR TRIANGLE (LAB1)//
@@ -165,10 +168,10 @@ void SceneBasic_Uniform::compile()
 void SceneBasic_Uniform::update( float t )
 {
 	//update your angle here
-    
+    t = rotateModifier;
     // LAB1//
     if (m_animate) {
-        angle += 0.01f;
+        angle += 0.01f + rotateModifier;
 
         if (angle >= 360.0f)
             angle -= 360.0f;
@@ -395,4 +398,15 @@ void SceneBasic_Uniform::setMatrices()
 
 }
 
-//add a method that rotates the model
+void moveLeft(float r)
+{
+    
+    SceneBasic_Uniform update(float r);
+}
+
+void moveRight(float r)
+{
+    r = r * -1.0f;
+    SceneBasic_Uniform update(float r);
+}
+
