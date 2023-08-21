@@ -30,9 +30,9 @@ SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
 
-    /*mesh3 = ObjMesh::load("../Project_Template/media/grassland.obj", true); //for textures
+    mesh3 = ObjMesh::load("../Project_Template/media/grassland.obj", true); //for textures
     mesh4 = ObjMesh::load("../Project_Template/media/trees.obj", true); //for controls or splatter
-    mesh5 = ObjMesh::load("../Project_Template/media/shanopi.obj", true);*/ //for fog
+    mesh5 = ObjMesh::load("../Project_Template/media/shanopi.obj", true); //for fog
 
 }  //last three numbers open the teapot
 
@@ -137,7 +137,7 @@ void SceneBasic_Uniform::initScene()
 
     //model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
-    view = glm::lookAt(vec3(-1.0f, 0.0f, 20.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    view = glm::lookAt(vec3(-1.0f, 0.0f, 22.0f), vec3(0.0f, 1.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
     projection = mat4(1.0f);
     prog.setUniform("Spot.Ld", vec3(0.9f));
     prog.setUniform("Spot.Ls", vec3(0.9f));
@@ -289,7 +289,7 @@ void SceneBasic_Uniform::render()
     model = glm::translate(model, vec3(0.0f, 0.0f, 1.0f));//translation is set here?
     model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
-    mesh->render();
+    mesh->render(); //swampy
 
     //*flare*//
 
@@ -306,10 +306,51 @@ void SceneBasic_Uniform::render()
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(-6.0f, 0.0f, 1.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    model = glm::translate(model, vec3(0.0f, -3.0f, 8.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(-105.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
-    mesh2->render();
+    mesh2->render(); //flare
+
+
+
+    //*3*//
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(0.0f, 0.0f, -10.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(15.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(angle), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    setMatrices();
+    mesh3->render(); //grass
+
+    //*4*//
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(0.0f, 10.0f, -5.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(15.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(angle), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    setMatrices();
+    mesh4->render(); //trees
+
+    //*5*//
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(6.0f, 2.0f, -5.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(15.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    model = glm::rotate(model, glm::radians(angle), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    setMatrices();
+    mesh5->render(); //shanopi
 }
 
 void SceneBasic_Uniform::resize(int w, int h)
