@@ -31,6 +31,10 @@ private:
     std::unique_ptr<ObjMesh> mesh; //for swampy?
     std::unique_ptr<ObjMesh> mesh2; //for flare?
 
+    //std::unique_ptr<ObjMesh> mesh3; //for grassland?
+    //std::unique_ptr<ObjMesh> mesh4; //for trees?
+    //std::unique_ptr<ObjMesh> mesh5; //for shanopi?
+
     glm::mat4 rotationMatrix; //check later for errors
 
     void compile();

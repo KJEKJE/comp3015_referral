@@ -25,14 +25,14 @@ using glm::mat4;
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f, 0.0f, 1.0f))), plane(10.0f, 10.0f, 100, 100), torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f)
+SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f, 0.0f, 1.0f))), plane(50.0f, 50.0f, 100, 100), torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f)
 {
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
 
-    /*mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
-    mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
-    mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);*/
+    /*mesh3 = ObjMesh::load("../Project_Template/media/grassland.obj", true); //for textures
+    mesh4 = ObjMesh::load("../Project_Template/media/trees.obj", true); //for controls or splatter
+    mesh5 = ObjMesh::load("../Project_Template/media/shanopi.obj", true);*/ //for fog
 
 }  //last three numbers open the teapot
 
