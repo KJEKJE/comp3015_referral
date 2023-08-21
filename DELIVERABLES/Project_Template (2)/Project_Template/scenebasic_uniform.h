@@ -23,8 +23,8 @@ private:
     //GLuint vaoHandle; //Lab1 for triangle
     GLSLProgram prog;
     //GLSLProgram prog2?;
-    Torus torus; //Lab2
-    Teapot teapot;
+    //Torus torus; //Lab2
+    //Teapot teapot;
     float angle; //Lab1 for spinning
 
     Plane plane; //plane.

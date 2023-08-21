@@ -1,10 +1,11 @@
 #version 460
 
-//flat in vec3 LightIntensity;
 in vec4 Position;
 in vec3 Normal;
 
 layout (location = 0) out vec4 FragColor;
+
+//flat in vec3 LightIntensity;
 
 uniform struct SpotlightInfo
 {

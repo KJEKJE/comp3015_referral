@@ -25,7 +25,7 @@ using glm::mat4;
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f, 0.0f, 1.0f))), plane(50.0f, 50.0f, 100, 100), torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f)
+SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f)
 {
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
@@ -142,8 +142,8 @@ void SceneBasic_Uniform::initScene()
     prog.setUniform("Spot.Ld", vec3(0.9f));
     prog.setUniform("Spot.Ls", vec3(0.9f));
     prog.setUniform("Spot.La", vec3(0.5f));
-    prog.setUniform("Spot.Exponent", vec3(50.0f));
-    prog.setUniform("Spot.Cutoff", vec3(15.0f));
+    prog.setUniform("Spot.Exponent",50.0f);
+    prog.setUniform("Spot.Cutoff", glm::radians(15.0f));    
 
 }
 
@@ -217,7 +217,7 @@ void SceneBasic_Uniform::render()
     model = glm::rotate(model, glm::radians(angle/*angle*/), vec3(1.0f, 0.0f, 1.0f));//rotation is set here?
     //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
     setMatrices();
-    torus.render();
+    //torus.render();
 
     //*//
 
@@ -242,7 +242,7 @@ void SceneBasic_Uniform::render()
     //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
     //projection = mat4(1.0f);
     setMatrices(); 
-    teapot.render();
+    //teapot.render();
 
     //*//
 
