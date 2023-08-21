@@ -1,4 +1,5 @@
 #include "scenebasic_uniform.h"
+#include <sstream>
 
 #include <cstdio>
 #include <cstdlib>
@@ -23,7 +24,17 @@ using glm::mat4;
 
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
+//SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
+SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f, 0.0f, 1.0f))), plane(10.0f, 10.0f, 100, 100), torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f)
+{
+    mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
+    mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
+
+    /*mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
+    mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
+    mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);*/
+
+}  //last three numbers open the teapot
 
 void SceneBasic_Uniform::initScene()
 {
@@ -86,7 +97,7 @@ void SceneBasic_Uniform::initScene()
 
     model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
-    view = glm::lookAt(vec3(-1.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
+    view = glm::lookAt(vec3(-1.0f, 0.0f, 20.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
     //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
     projection = mat4(1.0f);
 
@@ -213,6 +224,71 @@ void SceneBasic_Uniform::render()
     //projection = mat4(1.0f);
     setMatrices(); 
     teapot.render();
+
+    //*//
+
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(0.0f, 0.0f, 1.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(35.0f), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+    //model = glm::rotate(model, glm::radians(-80.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
+
+    //view = glm::lookAt(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
+    //projection = mat4(1.0f);
+    setMatrices();
+    plane.render();
+
+    //*//
+
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(0.0f, 0.0f, 1.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    setMatrices();
+    mesh->render();
+
+    //*flare*//
+
+    prog.setUniform("Material.Kd", 0.2f, 0.55f, 0.9f); //diffuse
+    //prog.setUniform("Light.Ld", 1.0f, 1.0f, 1.0f); //diffuse
+
+    prog.setUniform("Material.Ka", 0.2f, 0.55f, 0.9f); //ambient
+    //prog.setUniform("Light.La", 0.4f, 0.4f, 0.4f); //ambient
+
+    prog.setUniform("Material.Ks", 0.8f, 0.8f, 0.8f); //specular
+    //prog.setUniform("Light.Ls", 1.0f, 1.0f, 1.0f); //specular
+
+    //prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f)); //can play with this more later
+    prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
+
+    model = mat4(1.0f);
+    model = glm::translate(model, vec3(-6.0f, 0.0f, 1.0f));//translation is set here?
+    model = glm::rotate(model, glm::radians(-90.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    setMatrices();
+    mesh2->render();
 }
 
 void SceneBasic_Uniform::resize(int w, int h)

@@ -27,7 +27,9 @@ private:
     Teapot teapot;
     float angle; //Lab1 for spinning
 
-    //unique_ptr<ObjMesh>
+    Plane plane; //plane.
+    std::unique_ptr<ObjMesh> mesh; //for swampy?
+    std::unique_ptr<ObjMesh> mesh2; //for flare?
 
     glm::mat4 rotationMatrix; //check later for errors
 
