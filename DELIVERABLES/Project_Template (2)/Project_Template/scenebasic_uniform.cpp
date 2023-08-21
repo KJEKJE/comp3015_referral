@@ -27,7 +27,7 @@ using glm::mat4;
 //SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) {}  //last three numbers open the teapot
 //SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,1.0f))) , torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {}  //last three numbers open the teapot
-SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f), tPrev(0)
+SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(0.0f), tPrev(0.0f), lightPos(5.0f, 5.0f, 5.0f, 1.0f)
 {
     mesh = ObjMesh::load("../Project_Template/media/swampy.obj", true);
     mesh2 = ObjMesh::load("../Project_Template/media/flare.obj", true);
@@ -35,6 +35,8 @@ SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f, 50.0f, 100, 100), angle(
     mesh3 = ObjMesh::load("../Project_Template/media/grassland.obj", true); //for textures
     mesh4 = ObjMesh::load("../Project_Template/media/trees.obj", true); //for controls or splatter
     mesh5 = ObjMesh::load("../Project_Template/media/shanopi.obj", true); //for fog
+
+    //spot = ObjMesh::load("media/spot/spot_triangulated.obj");
 
 }  //last three numbers open the teapot
 
@@ -44,6 +46,8 @@ void SceneBasic_Uniform::initScene()
     tAngle = 0.0f;
     rotateModifier = 0.0f;
     compile();
+
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
     //FOR TRIANGLE (LAB1)//
 
@@ -142,13 +146,24 @@ void SceneBasic_Uniform::initScene()
 
     //model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
-    view = glm::lookAt(vec3(-1.0f, 0.0f, 22.0f), vec3(0.0f, 1.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
-    projection = mat4(1.0f);
+    view = glm::lookAt(vec3(-1.0f, 0.0f, 22.0f), vec3(0.0f, angle, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    projection = /*mat4(1.0f);*/ glm::perspective(glm::radians(50.0f), (float)width / height, 0.5f, 100.0f);
+
+    angle = 90.0f;
+    rotationSpeed = 0.05f;
+
     prog.setUniform("Spot.Ld", vec3(0.9f));
     prog.setUniform("Spot.Ls", vec3(0.9f));
     prog.setUniform("Spot.La", vec3(0.5f));
     prog.setUniform("Spot.Exponent",50.0f);
     prog.setUniform("Spot.Cutoff", glm::radians(15.0f));    
+
+    prog.setUniform("Light[0].L", glm::vec3(45.0f));
+    prog.setUniform("Light[0].Position", view*lightPos);
+    prog.setUniform("Light[1].L", glm::vec3(0.3f));
+    prog.setUniform("Light[1].Position", glm::vec4(0,0.14f,-1.0f,0));
+    prog.setUniform("Light[2].L", glm::vec3(45.0f));
+    prog.setUniform("Light[2].Position", view * glm::vec4(-7,3,7,1));
 
 }
 
@@ -171,7 +186,7 @@ void SceneBasic_Uniform::update( float t )
     t = rotateModifier;
     // LAB1//
     if (m_animate) {
-        angle += 0.01f + rotateModifier;
+        angle += 0.001f + rotateModifier;
 
         if (angle >= 360.0f)
             angle -= 360.0f;
@@ -188,6 +203,48 @@ void SceneBasic_Uniform::update( float t )
             tAngle -= glm::two_pi<float>();
         }
     }
+    if (animating()) {
+        //angle = glm::mod(angle + deltaT * rotationSpeed, glm::two_pi<float>());
+        lightPos.x = glm::cos(angle) * 7.0f;
+        lightPos.y = 3.0f;
+        lightPos.z = glm::sin(angle) * 7.0f;
+    }
+
+}
+
+void SceneBasic_Uniform::drawScene()
+{
+    drawFloor();
+    glm::vec3 testColour(0.1f, 0.33f, 0.9f);
+    drawSpot(glm::vec3(0, 0, 0), 2.0f, 0, testColour);
+
+    float metalRough = 0.4f;
+
+    drawSpot(glm::vec3(1.0f, 0.0f, 1.0f), metalRough, 1, glm::vec3(0.5f, 0.6f, 0.3f));
+}
+
+void SceneBasic_Uniform::drawFloor()
+{
+    model = glm::mat4(1.0f);
+    prog.setUniform("Material.Rough", 0.9f);
+    prog.setUniform("Material.Metal", 0);
+    prog.setUniform("Material.Colour", glm::vec3(0.2f));
+    model = glm::translate(model, glm::vec3(0.0f, -0.7f, 0.0f));
+    setMatrices();
+    //plane.render();
+
+}
+
+void SceneBasic_Uniform::drawSpot(const glm::vec3& pos, float rough, int metal, const glm::vec3& colour)
+{
+    model = mat4(1.0f);
+    prog.setUniform("Material.Rough", rough);
+    prog.setUniform("Material.Metal", metal);
+    prog.setUniform("Material.Colour", colour);
+    model = glm::translate(model, pos);
+    model = glm::rotate(model, glm::radians(180.0f), vec3(0.0f, -0.7f, 0.0f));
+    setMatrices();
+    //spot->render();
 
 }
 
@@ -196,6 +253,9 @@ void SceneBasic_Uniform::render()
     //glClear(GL_COLOR_BUFFER_BIT); //LAB1
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT); //LAB2
     
+    prog.setUniform("Light[0].Position", view * lightPos);
+    drawScene();
+
     //create the rotation matrix here and update the uniform in the shader 
 
     //LAB1//
@@ -325,8 +385,8 @@ void SceneBasic_Uniform::render()
     prog.setUniform("Material.Shininess", 100.0f); //can play with this more later
 
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(0.0f, -3.0f, 8.0f));//translation is set here?
-    model = glm::rotate(model, glm::radians(-105.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
+    model = glm::translate(model, vec3(0.0f, 0.0f, angle*5));//translation is set here?
+    model = glm::rotate(model, glm::radians(40.0f), vec3(0.0f, 1.0f, 0.0f));//rotation is set here?
     setMatrices();
     mesh2->render(); //flare
 

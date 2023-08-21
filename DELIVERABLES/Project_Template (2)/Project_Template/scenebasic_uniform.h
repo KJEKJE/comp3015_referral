@@ -28,8 +28,13 @@ private:
     float angle; //Lab1 for spinning
     float tAngle; //toon shading
     float tPrev; //toon shading
+    float rotationSpeed;
+    std::unique_ptr <ObjMesh> spot;
+
     bool leftPressed;
     bool rightPressed;
+
+    glm::vec4 lightPos;
 
     Plane plane; //plane.
     std::unique_ptr<ObjMesh> mesh; //for swampy?
@@ -42,6 +47,9 @@ private:
     glm::mat4 rotationMatrix; //check later for errors
 
     void compile();
+    void drawScene();
+    void drawFloor();
+    void drawSpot(const glm::vec3& pos, float rough, int metal, const glm::vec3& colour);
 
 public:
     SceneBasic_Uniform();

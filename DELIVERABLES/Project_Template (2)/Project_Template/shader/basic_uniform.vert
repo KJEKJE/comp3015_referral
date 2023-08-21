@@ -6,7 +6,7 @@ layout (location = 1) in vec3 VertexNormal;
 
 //flat out vec3 LightIntensity;
 
-out vec4 Position;
+out vec3 Position; //might need to be vec3, will see
 out vec3 Normal;
 
 //out vec3 Color;
@@ -112,10 +112,10 @@ uniform mat4 ProjectionMatrix;
 }*/
 
 
-void getCameraSpaceValues(out vec3 norm, out vec4 position)
+void getCameraSpaceValues(out vec3 norm, out vec3 position)
 {
     norm=normalize(NormalMatrix*VertexNormal);
-    position=(ModelViewMatrix * vec4(VertexPosition, 1.0));
+    position=(ModelViewMatrix * vec4(VertexPosition, 1.0)).xyz; //has been tweaked
 }
 
 void main()
