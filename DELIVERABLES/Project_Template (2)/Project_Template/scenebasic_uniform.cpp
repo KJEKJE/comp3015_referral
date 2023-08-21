@@ -18,7 +18,8 @@ using glm::vec3;
 
 using glm::mat4;
 
-SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/20, /*30*/20), angle(0.0f) {} 
+//SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, /*30*/50, /*30*/50), angle(0.0f) {} 
+SceneBasic_Uniform::SceneBasic_Uniform() : teapot(50, glm::translate(mat4(1.0f), vec3(0.0f,0.0f,0.0f))) {} 
 
 void SceneBasic_Uniform::initScene()
 {
@@ -82,6 +83,7 @@ void SceneBasic_Uniform::initScene()
     model = glm::rotate(model, glm::radians(-35.0f/*angle*/), vec3(1.0f, 0.0f, 0.0f));//rotation is set here?
 
     view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f));
+    //view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f),vec3(0.0f, 1.0f, 0.0f)); //original position from lab2
     projection = mat4(1.0f);
 
     //DIFFUSE//
@@ -156,7 +158,8 @@ void SceneBasic_Uniform::render()
     //glBindVertexArray(0);
 
     setMatrices();
-    torus.render();
+    //torus.render();
+    teapot.render();
 }
 
 void SceneBasic_Uniform::resize(int w, int h)

@@ -10,6 +10,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 //lab2
 #include "helper/torus.h"
+//lab3
+#include "helper/teapot.h"
 
 
 class SceneBasic_Uniform : public Scene
@@ -17,7 +19,9 @@ class SceneBasic_Uniform : public Scene
 private:
     //GLuint vaoHandle; //Lab1 for triangle
     GLSLProgram prog;
-    Torus torus; //Lab2
+    //GLSLProgram prog2?;
+    //Torus torus; //Lab2
+    Teapot teapot;
     float angle; //Lab1 for spinning
 
     glm::mat4 rotationMatrix; //check later for errors
