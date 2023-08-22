@@ -28,7 +28,13 @@ I got Blinn Phong working to shine a blue light on the torus, and then learnt ho
 
 Once an object loader was implemented, I then spent time trying to have it load in models I built on Blender. These models have their own vertices and normal, and were switched in.
 
-After, I successfully added in a spotlight that was demonstrated using a plane for reference. That plane would continue throughout my project as a way of understanding transformation and rotation in the space provided. Toon shading was then implemented in. The toon shading can be changed using the const level variables to change up how light interacts with the models at hand.
+![absolute fun chaos](https://github.com/KJEKJE/comp3015_referral/assets/55700917/62d86164-ccc0-4530-9d0c-097ecc075085)
+
+After, I successfully added in a spotlight that was demonstrated using a plane for reference. That plane would continue throughout my project as a way of understanding transformation and rotation in the space provided. Toon shading was then implemented in. 
+
+![the cel shading effect](https://github.com/KJEKJE/comp3015_referral/assets/55700917/8651f6b8-003d-4740-9832-be3480b9ed6d)
+
+The toon shading can be changed using the const level variables to change up how light interacts with the models at hand.
 
 ![the two hour error](https://github.com/KJEKJE/comp3015_referral/assets/55700917/98706445-39e2-421a-b054-4a6bbd90a375)
 
